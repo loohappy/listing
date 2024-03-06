@@ -10,8 +10,5 @@
     "dev:frontend": "vite"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+  "license": "ISC"
 }
