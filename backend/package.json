@@ -1,26 +1,16 @@
 {
-  "name": "food-ordring-platform",
+  "name": "school-listing",
   "version": "1.0.0",
-  "description": "Gaan is a food ordering platform ",
+  "description": "",
   "main": "./src/index.ts",
   "scripts": {
     "dev": "nodemon ./src/index"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/khaledhelmyg/gaan.git"
-  },
   "keywords": [
-    "Food-Ordering-Platform",
     "Node.js",
     "TypeScript"
   ],
-  "author": "Khaled Helmy",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/khaledhelmyg/gaan/issues"
-  },
-  "homepage": "https://github.com/khaledhelmyg/gaan#readme",
+  "author": "",
   "dependencies": {
     "aws-sdk": "^2.1569.0",
     "cors": "^2.8.5",
