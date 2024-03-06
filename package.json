@@ -1,0 +1,17 @@
+{
+  "name": "listing-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "node ./src/index",
+    "dev:backend": "nodemon ./src/index",
+    "dev:frontend": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
