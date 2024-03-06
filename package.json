@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "start": "node ./src/index",
+    "start": "node ./backend/src/index",
+    "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
+    "build:backend": "tsc && vite build",
+    "build:frontend": "vite build",
     "dev:backend": "nodemon ./src/index",
     "dev:frontend": "vite"
   },
