@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "start": "node ./backend/src/index",
-    "build": "cd backend && npm i && cd client && npm i && npm run build",
+    "build": "cd backend && npm i && cd ../client && npm i && npm run build",
     "build:backend": "tsc && vite build",
     "build:frontend": "vite build",
     "dev:backend": "nodemon ./src/index",
