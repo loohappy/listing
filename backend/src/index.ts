@@ -3,12 +3,17 @@ import cors from "cors";
 import { connectDB } from "./connect";
 import "dotenv/config";
 import router from "./routes/image";
+import path from "path";
 
 const app: Application = express();
 
 app.use(express.json());
 app.use(cors());
-
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
 // Example route for handling image creation and retrieval
 app.use(router);
 app.get("/", async (req: Request, res: Response) => {
