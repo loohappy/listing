@@ -5,7 +5,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "dev": "nodemon ./src/index",
-    "start": "node ./src/index"
+    "start": "node ./src/index",
+    "build": "npx tsc"
   },
   "keywords": [
     "Node.js",
