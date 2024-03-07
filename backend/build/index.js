@@ -19,19 +19,18 @@ require("dotenv/config");
 const image_1 = __importDefault(require("./routes/image"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
+const PORT = parseInt(process.env.PORT) || 5000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
-const __dirname = path_1.default.resolve();
-app.use(express_1.default.static(path_1.default.join(__dirname, "/client/build")));
+app.use(express_1.default.static(path_1.default.join(__dirname, "../../client/dist")));
 app.get("*", (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, "/client/build/index.html"));
+    res.sendFile(path_1.default.join(__dirname, "../../client/dist/index.html"));
 });
 // Example route for handling image creation and retrieval
 app.use(image_1.default);
 app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json({ message: "Hello" });
 }));
-const PORT = parseInt(process.env.PORT) || 5000;
 // Call the connectDB function to establish the connection
 (0, connect_1.connectDB)()
     .then(() => {
